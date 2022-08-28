@@ -2,14 +2,14 @@ package Task;
 
 public class Main {
     public static void main(String[] args) {
-        task1();
-        task2();
-        task3();
+        task1(2022);
+        task2(0, 2014);
+        task3(95);
     }
 
-    private static void task1() {
+    private static void task1(int year) {
         System.out.println("Ответ на задание №1:");
-        int year = 2022;
+        //int year = 2022;
         if (year % 100 == 0 && year % 400 == 0) {
             System.out.println(year + " год является високосным годом\n");
         } else if (year % 4 == 0 && year % 100 > 0) {
@@ -21,10 +21,10 @@ public class Main {
         }
     }
 
-    private static void task2() {
+    private static void task2(int clientOS, int clientDeviceYear) {
         System.out.println("Ответ на задание №2:");
-        int clientOS = 1; //0 - iOS, 1- Android
-        int clientDeviceYear = 2018; //clientDeviceYear >= 2015 - new smartfone
+        //int clientOS = 1; //0 - iOS, 1- Android
+        //int clientDeviceYear = 2018; //clientDeviceYear >= 2015 - new smartfone
 
         if (clientOS == 0 && clientDeviceYear >= 2015) {
             System.out.println("Установите версию приложения для iOS по ссылке\n");
@@ -37,9 +37,9 @@ public class Main {
         }
     }
 
-    private static void task3() {
+    private static void task3(int deliveryDistance ) {
         System.out.println("Ответ на задание №3:");
-        int deliveryDistance = 95;
+        //int deliveryDistance = 95;
         int deliveryDays = 1;
         int deliveryStartInterval = 20;
         int deliveryInterval = 40;
