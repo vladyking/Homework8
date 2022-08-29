@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         task1(2022);
         task2(0, 2014);
-        task3(95);
+        System.out.println("Потребуется для доставки дней: " + task3(95));
     }
 
     private static void task1(int year) {
@@ -36,9 +36,8 @@ public class Main {
         }
     }
 
-    private static void task3(int deliveryDistance ) {
+    private static int task3(int deliveryDistance) {
         System.out.println("Ответ на задание №3:");
-        //int deliveryDistance = 95;
         int deliveryDays = 1;
         int deliveryStartInterval = 20;
         int deliveryInterval = 40;
@@ -47,6 +46,6 @@ public class Main {
         } else {
             deliveryDays = deliveryDays + (int) Math.ceil((deliveryDistance - deliveryStartInterval) / (double) deliveryInterval);
         }
-        System.out.println("Потребуется для доставки дней: " + deliveryDays);
+        return deliveryDays;
     }
 }
